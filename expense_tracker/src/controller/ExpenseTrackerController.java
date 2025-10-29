@@ -45,5 +45,30 @@ public class ExpenseTrackerController {
     return true;
   }
   
-  // Other controller methods
+  public void applyFilter(String filterType, double amount, String category) {
+    List<Transaction> transactions = model.getTransactions();
+    TransactionFilter filter = null;
+    if (filterType.toLowerCase().equals("amount")){
+      // If the amount entered is not valid
+      if (!InputValidation.isValidAmount(amount)) {
+        view.showError("Invalid amount filter");
+        return;
+      }
+      filter = new AmountFilter(amount);
+    }
+    else if (filterType.toLowerCase().equals("category")){
+      // If the category entered is not valid
+      if (!InputValidation.isValidCategory(category)) {
+        view.showError("Invalid category filter");
+        return;
+      }  
+      filter = new CategoryFilter(category);
+    }
+    else{
+      view.refreshTable(transactions);
+      return;
+    }
+    List<Transaction> filtered = filter.filter(transactions);
+    view.refreshTable(filtered);
+  }
 }

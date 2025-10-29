@@ -20,6 +20,8 @@ public class ExpenseTrackerView extends JFrame {
   private JTextField categoryField;
   private DefaultTableModel model;
   
+  private JButton applyFilterBtn;
+  private JComboBox<String> filterTypeBox;
 
   public ExpenseTrackerView() {
     setTitle("Expense Tracker"); // Set title
@@ -41,6 +43,11 @@ public class ExpenseTrackerView extends JFrame {
     JLabel categoryLabel = new JLabel("Category:");
     categoryField = new JTextField(10);
 
+    applyFilterBtn = new JButton("Apply Filter");
+    JLabel filterLabel = new JLabel("Filter by:");
+    String[] filterOptions = {"None", "Amount", "Category"};
+    filterTypeBox = new JComboBox<>(filterOptions);
+
     // Create table
     transactionsTable = new JTable(model);
   
@@ -51,9 +58,13 @@ public class ExpenseTrackerView extends JFrame {
     inputPanel.add(categoryLabel); 
     inputPanel.add(categoryField);
     inputPanel.add(addTransactionBtn);
-  
+    inputPanel.add(filterLabel);
+    inputPanel.add(filterTypeBox);
+    
+    
     JPanel buttonPanel = new JPanel();
     buttonPanel.add(addTransactionBtn);
+    buttonPanel.add(applyFilterBtn);
   
     // Add panels to frame
     add(inputPanel, BorderLayout.NORTH);
@@ -61,7 +72,7 @@ public class ExpenseTrackerView extends JFrame {
     add(buttonPanel, BorderLayout.SOUTH);
   
     // Set frame properties
-    setSize(400, 300);
+    setSize(600, 400);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setVisible(true);
   
@@ -89,9 +100,6 @@ public class ExpenseTrackerView extends JFrame {
       transactionsTable.updateUI();
   
     }  
-  
-
-  
   
   public JButton getAddTransactionBtn() {
     return addTransactionBtn;
@@ -124,5 +132,17 @@ public class ExpenseTrackerView extends JFrame {
 
   public void setCategoryField(JTextField categoryField) {
     this.categoryField = categoryField;
+  }
+  
+  public JButton getApplyFilterBtn() {
+    return applyFilterBtn;
+  }
+
+  public String getSelectedFilterType() {
+    return filterTypeBox.getSelectedItem().toString();
+  }
+
+  public void showError(String message) {
+    JOptionPane.showMessageDialog(this, message);
   }
 }
