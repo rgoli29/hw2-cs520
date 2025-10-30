@@ -1,0 +1,12 @@
+Building a new Feature: Export to CSV
+
+We are implementing this feature using an MVC architecture.
+
+- Model: We create a new class called Exporter with defined headers that will remain constants. In this Exporter class, we create a new function called exportToCSV which takes in the list of transactions and the file name
+        provided by the user. We validate this file name(implemented in controller side) and write the contents of the transactions to this new file separated by commas(can be set as a constant delimiter).
+- View: We add an "Export to CSV" button to allow users to export the transactions to a CSV file. Once the button is clicked, we check the file name if it is valid and continue to write to the CSV file. If the write fails or 
+        the file name is invalid, we throw an appropriate error message.
+- Controller: We create a new class to validate file names called FileValidation. This can be called when validating file names to write to. In ExpenseTrackerContoller, we add a new function to handle the button click of 
+              exporting to CSV and the model will handle the main logic. 
+
+In all the given steps, we can extend the old code with new features to prevent modification of the old code as much as possible.

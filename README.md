@@ -10,6 +10,7 @@ We have added 3 new files as difnied by the 2nd part. The additions are as follo
  - `src/controller/CategoryFilter`: This is a class that is used to filter based on category. We have the following 2 functions:
     -  `CategoryFilter`: Takes in a string, that is the category on which we want to filter.
     - `filter`: Takes in List of Transaction called transactions. It returns a filtered list if the input category is valid, and null otherwise.
+ - `test/TestExample` : This file contains the test cases to test the application. It contains 5 test cases for input validation, transaction validation and filtering validation.
 
 
 ## Updated Files
