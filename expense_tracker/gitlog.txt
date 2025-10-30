@@ -1,0 +1,53 @@
+commit 44d43e73eb3c062387ed00047395241f8b00ff74
+Merge: 0c65d6b 19e8cb0
+Author: rgoli29 <71319366+rgoli29@users.noreply.github.com>
+Date:   Thu Oct 30 14:26:13 2025 -0400
+
+    Merge pull request #2 from rgoli29/part2
+    
+    Part2
+
+commit 19e8cb03b351d0be48102492f5f8b09120836763
+Author: rgoli29 <rgoli@umass.edu>
+Date:   Thu Oct 30 14:25:18 2025 -0400
+
+    Added export feature documentation, test screenshot and updated README's
+
+commit ee3ba3f0d2dcfaffb35f25b7b95d76555e5a9669
+Author: rgoli29 <rgoli@umass.edu>
+Date:   Thu Oct 30 13:42:27 2025 -0400
+
+    Added test cases
+
+commit 0c65d6bb660b77c1d5b1e851a395d6fae2a30922
+Merge: a640f2a eca644c
+Author: rgoli29 <71319366+rgoli29@users.noreply.github.com>
+Date:   Thu Oct 30 11:30:05 2025 -0400
+
+    Merge pull request #1 from rgoli29/part1
+    
+    Part1
+
+commit eca644ccb04e486570d58881852a6f8597133036
+Author: Kirat Arora <kiratarora@umass.edu>
+Date:   Thu Oct 30 11:23:04 2025 -0400
+
+    updated readme
+
+commit 6abb8e53b91c328b1fcbfcf8e3d94eb42d94fd23
+Author: Kirat Arora <kiratarora@umass.edu>
+Date:   Wed Oct 29 19:23:36 2025 -0400
+
+    added the filter functionality
+
+commit 3ba9b6fe6fb245c8afac093748e40fcbc7605bf0
+Author: Kirat Arora <kiratarora@umass.edu>
+Date:   Wed Oct 29 17:43:32 2025 -0400
+
+    added the interface and classes for filtering and updated readme with API instructions
+
+commit 7fcc66a1f325897c282480e984fa69f0bd5c440a
+Author: Kirat Arora <kiratarora@umass.edu>
+Date:   Wed Oct 29 17:02:11 2025 -0400
+
+    removed jdoc from .gitignore to include jdoc to the repo
