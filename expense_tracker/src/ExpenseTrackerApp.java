@@ -34,6 +34,13 @@ public class ExpenseTrackerApp {
       }
     });
 
+    view.getApplyFilterBtn().addActionListener(e -> {
+      String filterType = view.getSelectedFilterType();
+      double amount = view.getAmountField();
+      String category = view.getCategoryField();
+      controller.applyFilter(filterType, amount, category);
+    });
+
   }
 
 }
