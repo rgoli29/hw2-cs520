@@ -12,3 +12,8 @@ We have added 3 new files as difnied by the 2nd part. The additions are as follo
     - `filter`: Takes in List of Transaction called transactions. It returns a filtered list if the input category is valid, and null otherwise.
 
 
+## Updated Files
+We have updated 3 files as well:
+ - `ExpenseTrackerController.java`: Added the apply filter function that takes in a string filterType, a string category, and a double amount. It returns a filter or displays an error. 
+ - `ExpenseTrackerView.java`: Added all the elements to view. 
+  - `ExpenseTrackerApp.java`: Added the functionality to the apply filter button. 
